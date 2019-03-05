@@ -5,6 +5,7 @@
     <classes>
       <class name="com.qa.testcases.TestCase1">
         <methods>
+          <include name="spacenametest"/>
           <include name="quotespage"/>
           <include name="teardown"/>
           <include name="reportteardown"/>

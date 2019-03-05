@@ -31,14 +31,20 @@ public class HomePageTest extends TestBase {
 	
 	@Test
 	public void clickjourney(){
+		try {
+			Thread.sleep(5000);
+			detailspage = HomeScreen.healthpage();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		detailspage = HomeScreen.healthpage();
 	}
 	
 	
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		//driver.quit();
 	}
 
 }

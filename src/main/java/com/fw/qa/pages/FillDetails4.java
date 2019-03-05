@@ -12,7 +12,7 @@ public class FillDetails4 extends TestBase {
 	@FindBy(name="city")
 	WebElement city;
 	
-	@FindBy(xpath="//*[@id='cityinput']/div[1]/div/div/div/div[2]/ul/li")
+	@FindBy(xpath="//*[@id='cityinput']/div[1]/div/div/div/div/ul/li")
 	WebElement selectcity;
 	
 	@FindBy(xpath="//*[@id='cityinput']/div[2]/div/div/label/div/a[3]/div")

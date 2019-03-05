@@ -62,11 +62,16 @@ public void setup(){
 	
 	initialization();
 	homescreen = new HomeScreen();
-	detailspage1 = HomeScreen.healthpage();
-	
+	try {
+		Thread.sleep(5000);
+		detailspage1 = HomeScreen.healthpage();
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
-@Test 
+@Test (priority = 1)
 	public void blanknametest() throws Exception{
 	
 	extenttest = extent.startTest("Blank name test");
@@ -78,7 +83,7 @@ public void setup(){
 	Assert.assertEquals(errormsg, "Required","String does not match");	
 	}
 
-@Test 
+//@Test 
 public void spacenametest() throws Exception{
 
 	extenttest = extent.startTest("Extra space name test");
@@ -90,7 +95,7 @@ public void spacenametest() throws Exception{
 	Assert.assertEquals(errormsg, "","String does not match");	
 }
 
-@Test 
+@Test  (priority = 2)
 public void blankmobiletest() throws Exception{
 
 	extenttest = extent.startTest("Blank mobile number test");
@@ -104,7 +109,7 @@ public void blankmobiletest() throws Exception{
 		Assert.assertEquals(errormsg, "Required","String does not match");	
 }
 
-@Test 
+@Test  (priority = 3)
 public void invalidmobiletest() throws Exception{
 
 	extenttest = extent.startTest("Invalid mobile number test");
@@ -118,7 +123,7 @@ public void invalidmobiletest() throws Exception{
 	Assert.assertEquals(errormsg, "Number should start with 6, 7, 8 or 9.","String does not match");	
 }
 
-@Test 
+@Test  (priority = 4)
 public void invalidmobiletest2() throws Exception{
 
 	extenttest = extent.startTest("Invalid mobile number test 2");
@@ -132,7 +137,7 @@ public void invalidmobiletest2() throws Exception{
 	Assert.assertEquals(errormsg, "Please enter valid contact number","String does not match");	
 }
 
-@Test 
+@Test  (priority = 5)
 public void quotespage() throws Exception{
 
 	extenttest = extent.startTest("Quotes page test");

@@ -8,7 +8,7 @@ import com.fw.qa.baseclass.TestBase;
 
 public class HomeScreen extends TestBase {
 	
-	@FindBy(xpath="//*[@class='health']")
+	@FindBy(xpath="/html/body/div[1]/div[2]/div[1]/ul/li[2]/a")
 	static
 	WebElement health;
 	
