@@ -66,7 +66,13 @@ public String mobileerrormessage(){
 	}
 	
 	public FillDetails2 proceed(){
+		try{
+			Thread.sleep(2000);
 		continuebtn.click();
+		}catch(Exception e){
+			
+			continuebtn.click();
+		}
 		return new FillDetails2();
 		
 	}

@@ -1,4 +1,0 @@
-com\fw\qa\pages\LoginPage.class
-com\fw\qa\utilities\TestUtil.class
-com\fw\qa\baseclass\TestBase.class
-com\fw\qa\utilities\Xls_Reader.class
